@@ -1,0 +1,7 @@
+.btn {
+  display: block;
+  @include font(700, 16px, 1.87, 0.06em, var(--main-page-color));
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border: none;
+}

@@ -1,0 +1,27 @@
+.advantage__list {
+  display: flex;
+  margin-right: -30px;
+}
+
+.advantage__item {
+  margin-right: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
+.advantage__thumb {
+  @include flex-position();
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-section-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.advantage__title {
+  @include font(700, 14px, 1.14, 0.03em, null);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.advantage__text {
+  @include font(400, 14px, 1.71, 0.03em, var(--secondary-text-color));
+}

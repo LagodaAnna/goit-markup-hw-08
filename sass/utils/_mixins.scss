@@ -1,0 +1,13 @@
+@mixin flex-position($display: flex, $j-content: center, $al-item: center) {
+  display: $display;
+  justify-content: $j-content;
+  align-items: $al-item;
+}
+
+@mixin font($fw, $fz, $lh, $ls, $color) {
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $lh;
+  letter-spacing: $ls;
+  color: $color;
+}
