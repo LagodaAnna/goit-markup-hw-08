@@ -1,5 +1,10 @@
 .activity {
-  padding-top: 0;
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 0;
+  }
 }
 
 .activity__title {
@@ -8,12 +13,12 @@
 
 .activity__list {
   display: flex;
-  margin-right: calc(-1 * var(--set-margin-card));
+  margin: calc(-1 * var(--set-margin-card));
 }
 
 .activity__item {
-  margin-right: var(--set-margin-card);
-  flex-basis: calc (100% / 3 - var(--set-margin-card));
+  margin: var(--set-margin-card);
+  flex-basis: calc((100% - 6 * var(--set-margin-card)) / 3);
 }
 
 .activity__thumb {
