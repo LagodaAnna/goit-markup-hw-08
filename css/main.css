@@ -408,17 +408,6 @@ body.modal-open {
   max-width: 480px;
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet-bg.jpg);
-    max-width: 768px;
-    height: 400px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .hero {
     display: flex;
