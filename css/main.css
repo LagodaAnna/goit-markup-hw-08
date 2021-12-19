@@ -148,6 +148,7 @@ input:-webkit-autofill:active {
   background-color: var(--accent-color);
   border-radius: 4px;
   border: none;
+  padding: 0;
 }
 
 .container {
@@ -292,6 +293,10 @@ body {
   color: var(--main-text-color);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .header {
   border-bottom: 1px solid var(--header-border);
 }
@@ -401,6 +406,17 @@ body {
   background-size: cover;
   background-position: center;
   max-width: 480px;
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet-bg.jpg);
+    max-width: 768px;
+    height: 400px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -919,28 +935,55 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  padding: 90px 15px;
   background-color: var(--backdrop-bg-color);
   transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.5);
+  transform: scale(0.1);
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: scale(1);
   padding: 40px;
-  width: 528px;
-  height: 581px;
+  width: 100%;
   background-color: var(--main-page-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__btn-close {
@@ -966,9 +1009,16 @@ body {
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .form-modal {
@@ -1044,11 +1094,18 @@ body {
   justify-content: center;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .form-modal__checkbox-label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .form-modal__icon-wrapper {
@@ -1091,7 +1148,6 @@ body {
 }
 
 .form-modal__btn {
-  display: block;
   margin: 0 auto;
   width: 200px;
   height: 50px;
