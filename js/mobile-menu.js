@@ -15,8 +15,12 @@
     bodyScrollLock[scrollLockMethod](document.body);
   };
 
+   
+
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
+
+ 
 
   // Закрываем мобильное меню на более широких экранах
   // в случае изменения ориентации устройства.
@@ -26,4 +30,6 @@
     openMenuBtn.setAttribute('aria-expanded', false);
     bodyScrollLock.enableBodyScroll(document.body);
   });
+
+  
 })();
