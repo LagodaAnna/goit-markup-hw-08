@@ -21,10 +21,22 @@
     <header class="header">
       <div class="container container--header">
         <nav class="navigation">
-          <a href="./index.html" lang="en" class="logo logo__header link">
-            Web<span class="logo__header--black">Studio</span>
-          </a>
-          <ul class="navigation__list">
+          <div class="mobile-menu__header-container">
+            <a href="./index.html" lang="en" class="logo logo__header link">
+              Web<span class="logo__header--black">Studio</span>
+            </a>
+            <button
+              class="mobile-menu__open-btn js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg class="mobile-menu__open-icon" width="24" height="16">
+                <use href="./images/icons.svg#icon-menu-open"></use>
+              </svg>
+            </button>
+          </div>
+
+          <ul class="navigation__list list">
             <li class="navigation__item">
               <a class="navigation__link link" href="./index.html">Студия</a>
             </li>
@@ -39,9 +51,9 @@
           </ul>
         </nav>
 
-        <ul class="contacts-header">
+        <ul class="contacts-header list">
           <li class="contacts-header__item">
-            <a class="contacts-header__link link" href="mailto:info@devstudio.com">
+            <a class="choice-link contacts-header__link link" href="mailto:info@devstudio.com">
               <svg class="contacts-header__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
@@ -49,7 +61,7 @@
             </a>
           </li>
           <li class="contacts-header__item">
-            <a class="contacts-header__link link" href="tel:+380961111111">
+            <a class="choice-link contacts-header__link link" href="tel:+380961111111">
               <svg class="contacts-header__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
@@ -87,9 +99,10 @@
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
                   <img
-                    src="./images/portfolio-1.jpg"
+                    srcset="./images/img-portfolio-1@1x.jpg 1x, ./images/img-portfolio-1@2x.jpg 2x"
+                    src="./images/img-portfolio-1@1x.jpg"
                     alt="Веб-сайт открыт на ноутбуке"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="examples-cards__text-overlay">
@@ -98,7 +111,7 @@
                     конкурентов.
                   </p>
                 </div>
-                <div class="examples-cards__caption">
+                <div class="examples-cards__caption examples-cards__caption--first-card">
                   <h2 class="examples-cards__title">Технокряк</h2>
                   <p class="examples-cards__text">Веб-сайт</p>
                 </div>
@@ -109,9 +122,10 @@
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
                   <img
-                    src="./images/portfolio-2.jpg"
+                    srcset="./images/img-portfolio-2@1x.jpg 1x, ./images/img-portfolio-2@2x.jpg 2x"
+                    src="./images/img-portfolio-2@1x.jpg"
                     alt="Два баскетболиста"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="examples-cards__text-overlay">
@@ -133,9 +147,10 @@
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
                   <img
-                    src="./images/portfolio-3.jpg"
+                    srcset="./images/img-portfolio-3@1x.jpg 1x, ./images/img-portfolio-3@2x.jpg 2x"
+                    src="./images/img-portfolio-3@1x.jpg"
                     alt="Логотип ресторана"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="examples-cards__text-overlay">
@@ -154,7 +169,13 @@
             <li class="examples-cards__item">
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
-                  <img src="./images/portfolio-4.jpg" alt="Наушники" width="370" height="294" />
+                  <img
+                    srcset="./images/img-portfolio-4@1x.jpg 1x, ./images/img-portfolio-4@2x.jpg 2x"
+                    src="./images/img-portfolio-4@1x.jpg"
+                    alt="Наушники"
+                    width="450"
+                    height="294"
+                  />
                   <p class="examples-cards__text-overlay">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -171,7 +192,13 @@
             <li class="examples-cards__item">
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
-                  <img src="./images/portfolio-5.jpg" alt="Две коробки" width="370" height="294" />
+                  <img
+                    srcset="./images/img-portfolio-5@1x.jpg 1x, ./images/img-portfolio-5@2x.jpg 2x"
+                    src="./images/img-portfolio-5@1x.jpg"
+                    alt="Две коробки"
+                    width="450"
+                    height="294"
+                  />
                   <p class="examples-cards__text-overlay">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -188,7 +215,13 @@
             <li class="examples-cards__item">
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
-                  <img src="./images/portfolio-6.jpg" alt="Монитор" width="370" height="294" />
+                  <img
+                    srcset="./images/img-portfolio-6@1x.jpg 1x, ./images/img-portfolio-6@2x.jpg 2x"
+                    src="./images/img-portfolio-6@1x.jpg"
+                    alt="Монитор"
+                    width="450"
+                    height="294"
+                  />
                   <p class="examples-cards__text-overlay">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -205,7 +238,13 @@
             <li class="examples-cards__item">
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
-                  <img src="./images/portfolio-7.jpg" alt="Журнал" width="370" height="294" />
+                  <img
+                    srcset="./images/img-portfolio-7@1x.jpg 1x, ./images/img-portfolio-7@2x.jpg 2x"
+                    src="./images/img-portfolio-7@1x.jpg 1x"
+                    alt="Журнал"
+                    width="450"
+                    height="294"
+                  />
                   <p class="examples-cards__text-overlay">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -224,7 +263,13 @@
             <li class="examples-cards__item">
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
-                  <img src="./images/portfolio-8.jpg" alt="Ярлык" width="370" height="294" />
+                  <img
+                    srcset="./images/img-portfolio-8@1x.jpg 1x, ./images/img-portfolio-8@2x.jpg 2x"
+                    src="./images/img-portfolio-8@1x.jpg"
+                    alt="Ярлык"
+                    width="450"
+                    height="294"
+                  />
                   <p class="examples-cards__text-overlay">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -242,9 +287,10 @@
               <a href="" class="examples-cards__link link">
                 <div class="examples-cards__thumb">
                   <img
-                    src="./images/portfolio-9.jpg"
+                    srcset="./images/img-portfolio-9@1x.jpg 1x, ./images/img-portfolio-9@2x.jpg 2x"
+                    src="./images/img-portfolio-9@1x.jpg"
                     alt="Человек работает за ноутбуком"
-                    width="370"
+                    width="450"
                     height="294"
                   />
                   <p class="examples-cards__text-overlay">
@@ -265,14 +311,14 @@
     </main>
 
     <!--Футер-->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container container--footer">
         <div class="address-block">
           <a class="logo logo__footer link" href="./index.html" lang="en">
             Web<span class="logo__footer--white">Studio</span>
           </a>
           <address>
-            <ul class="address-block__list">
+            <ul class="address-block__list list">
               <li class="address-block__item">
                 <a class="address-block__link address-block__link--location link" href=""
                   >г. Киев, пр-т Леси Украинки, 26</a
@@ -291,7 +337,7 @@
         </div>
         <div class="social-join-block">
           <p class="social-join-block__title">присоединяйтесь</p>
-          <ul class="social">
+          <ul class="social list">
             <li class="social__item">
               <a href="" class="social__link social__link--footer link">
                 <svg class="social__icon" width="20" height="20">
@@ -337,5 +383,67 @@
         </div>
       </div>
     </footer>
+
+    <!--MOBILE MENU-->
+
+    <div class="mobile-menu js-menu-container">
+      <button class="mobile-menu__close-btn js-close-menu">
+        <svg class="mobile-menu__close-icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <nav class="mobile-navigation">
+        <ul class="mobile-navigation__list">
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link link" href="./index.html">Студия</a>
+          </li>
+          <li class="mobile-navigation__item">
+            <a
+              class="mobile-navigation__link mobile-navigation__link--current link"
+              href="./portfolio.html"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link link" href="">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-menu__contacts-list">
+        <li class="mobile-menu__contacts-item">
+          <a class="mobile-menu__contacts-tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-menu__contacts-item">
+          <a class="mobile-menu__contacts-mail link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-menu__social-list">
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-link link" href="">Instagram</a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-link link" href="">Twitter</a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-link link" href="">Facebook</a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-link link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
