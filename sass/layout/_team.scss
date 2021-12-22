@@ -42,6 +42,11 @@
   padding-top: 30px;
   padding-bottom: 24px;
 
+  @media screen and (min-width: 768px) {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+
   @media screen and (min-width: 1200px) {
     padding: 30px 32px;
   }
