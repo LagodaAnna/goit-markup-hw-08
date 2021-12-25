@@ -27,8 +27,7 @@
 
 .clients__link {
   @include flex-position();
-  padding-top: 16px;
-  padding-bottom: 16px;
+  height: 90px;
   border: 1px solid var(--main-icon-color);
   border-radius: 4px;
   color: var(--main-icon-color);

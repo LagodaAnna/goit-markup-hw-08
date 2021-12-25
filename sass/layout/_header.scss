@@ -18,10 +18,14 @@
 .logo__header {
   @media screen and (min-width: 768px) {
     margin-right: 88px;
+    padding-top: 19px;
+    padding-bottom: 19px;
   }
 
   @media screen and (min-width: 1200px) {
     margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
   }
 }
 
@@ -58,6 +62,11 @@
       color: var(--accent-color);
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .navigation__link--current {
@@ -81,10 +90,6 @@
 .contacts-header {
   @media screen and (max-width: 767px) {
     display: none;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-top: 21px;
-    padding-bottom: 21px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -111,6 +116,7 @@
     @include flex-position(flex, null, center);
     @include font(500, 12px, 1.17, 0.02em, var(--secondary-text-color));
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover,
     &:focus {
       color: var(--accent-color);
@@ -122,6 +128,18 @@
     padding-bottom: 32px;
     font-size: 14px;
     line-height: 1.14;
+  }
+}
+
+.contacts-header__link--mail {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 21px;
+  }
+}
+
+.contacts-header__link--tel {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 21px;
   }
 }
 

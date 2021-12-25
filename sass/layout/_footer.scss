@@ -20,11 +20,18 @@
   @media screen and (max-width: 1199px) {
     text-align: center;
   }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: unset;
+  }
 }
 
 .address-block {
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
   }
 }
 
@@ -34,6 +41,12 @@
 
 .logo__footer--white {
   color: var(--main-page-color);
+}
+
+.address-block__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .address-block__link {
@@ -53,6 +66,9 @@
 .social-join-block {
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
   }
 }
 
