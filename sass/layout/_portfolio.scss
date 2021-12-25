@@ -98,6 +98,7 @@
   @include font(400, 18px, 1.6, 0.03em, var(--main-page-color));
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
 }
 
 .examples-cards__link:hover .examples-cards__text-overlay,
@@ -106,21 +107,22 @@
 }
 
 .examples-cards__caption {
+  height: 146px;
   padding: 20px 24px;
   background-color: var(--main-page-color);
   border-right: 1px solid var(--portfolio-border);
   border-left: 1px solid var(--portfolio-border);
   border-bottom: 1px solid var(--portfolio-border);
 }
-
 .examples-cards__caption--first-card {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-bottom: 56px;
+    // padding-bottom: 56px;
   }
 }
 
 .examples-cards__title {
   @include font(700, 18px, 2, 0.06em, var(--main-text-color));
+  flex-grow: 2;
 }
 
 .examples-cards__text {
